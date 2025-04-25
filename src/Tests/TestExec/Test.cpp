@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
     // quick hack for FILE IO test
     if (cTestDataDir.empty())
     {
-        cTestDataDir.assign(CMAKE_SOURCE_DIR);
+        cTestDataDir.assign(ACA_SOURCE_DIR);
         cTestDataDir.append("/src/Tests/TestData/");
     }
 

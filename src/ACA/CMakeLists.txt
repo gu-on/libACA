@@ -1,13 +1,13 @@
 set(CurrLib Aca)
 
 ## get all source files
-file(GLOB ${CurrLib}_SOURCES RELATIVE ${CMAKE_SOURCE_DIR}/src/${CurrLib} *.cpp;*.txt)
-file(GLOB 3RDPARTY_SOURCES RELATIVE ${CMAKE_SOURCE_DIR}/src/${CurrLib} ../../3rdparty/Fft/*.cpp)
-file(GLOB ${CurrLib}_HEADERS RELATIVE ${CMAKE_SOURCE_DIR}/src/${CurrLib} *.h;../../inc/*.h;../../3rdparty/Fft/*.h)
-file(GLOB HELPER_HEADERS RELATIVE ${CMAKE_SOURCE_DIR}/src/${CurrLib} ../../inc/helper/*.h)
+file(GLOB ${CurrLib}_SOURCES RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} *.cpp;*.txt)
+file(GLOB 3RDPARTY_SOURCES RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} ../../3rdparty/Fft/*.cpp)
+file(GLOB ${CurrLib}_HEADERS RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} *.h;../../inc/*.h;../../3rdparty/Fft/*.h)
+file(GLOB HELPER_HEADERS RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} ../../inc/helper/*.h)
 
 ## add include directories
-include_directories(${CMAKE_SOURCE_DIR}/3rdparty/Fft ${CMAKE_SOURCE_DIR}/inc/helper)
+include_directories(${ACA_SOURCE_DIR}/3rdparty/Fft ${ACA_SOURCE_DIR}/inc/helper)
 add_inc_directories ()
 
 ## build a static library

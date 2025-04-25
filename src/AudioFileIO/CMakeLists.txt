@@ -6,18 +6,18 @@ set (${CurrLib}_VERSION_MINOR "0" CACHE INTERNAL "")
 set (${CurrLib}_VERSION_PATCH "1" CACHE INTERNAL "")
 
 # get source files
-file(GLOB ${CurrLib}_SOURCES RELATIVE ${CMAKE_SOURCE_DIR}/src/${CurrLib} *.c;*.cpp;*.txt)
-file(GLOB SNDLIB_SOURCES RELATIVE ${CMAKE_SOURCE_DIR}/src/${CurrLib} ../../3rdparty/sndlib/*.c;../../3rdparty/sndlib/*.cpp)
-file(GLOB ${CurrLib}_HEADERS RELATIVE ${CMAKE_SOURCE_DIR}/src/${CurrLib} *.h;../inc/*.h)
-file(GLOB SNDLIB_HEADERS RELATIVE ${CMAKE_SOURCE_DIR}/src/${CurrLib} ../../3rdparty/sndlib/*.h)
+file(GLOB ${CurrLib}_SOURCES RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} *.c;*.cpp;*.txt)
+file(GLOB SNDLIB_SOURCES RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} ../../3rdparty/sndlib/*.c;../../3rdparty/sndlib/*.cpp)
+file(GLOB ${CurrLib}_HEADERS RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} *.h;../inc/*.h)
+file(GLOB SNDLIB_HEADERS RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} ../../3rdparty/sndlib/*.h)
 
 #remove mains
-list(REMOVE_ITEM SNDLIB_SOURCES RELATIVE ${CMAKE_SOURCE_DIR}/src/${CurrLib} ../../3rdparty/sndlib/sndplay.c)
-list(REMOVE_ITEM SNDLIB_SOURCES RELATIVE ${CMAKE_SOURCE_DIR}/src/${CurrLib} ../../3rdparty/sndlib/sndinfo.c)
+list(REMOVE_ITEM SNDLIB_SOURCES RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} ../../3rdparty/sndlib/sndplay.c)
+list(REMOVE_ITEM SNDLIB_SOURCES RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} ../../3rdparty/sndlib/sndinfo.c)
 
 
 ## add include directories
-include_directories(${CMAKE_SOURCE_DIR}/3rdparty/sndlib)
+include_directories(${ACA_SOURCE_DIR}/3rdparty/sndlib)
 add_inc_directories ()
 
 # build a static library

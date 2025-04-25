@@ -5,7 +5,9 @@ project (ACA
 #######################################################################################################
 ## includes
 # where to look for the default stuff...
-set (CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake.modules")
+set (ACA_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+
+set (CMAKE_MODULE_PATH "${ACA_SOURCE_DIR}/cmake.modules")
 
 # platform detection
 include (SetPlatform)
@@ -29,29 +31,29 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 # set directories
 set (PROJECT_DIRECTORIES)
-list (APPEND PROJECT_DIRECTORIES ${CMAKE_SOURCE_DIR}/src/ACA) 
+list (APPEND PROJECT_DIRECTORIES ${ACA_SOURCE_DIR}/src/ACA) 
 
-list (APPEND PROJECT_DIRECTORIES ${CMAKE_SOURCE_DIR}/src/ComputeBeatHisto)       
-list (APPEND PROJECT_DIRECTORIES ${CMAKE_SOURCE_DIR}/src/ComputeChords)      
-list (APPEND PROJECT_DIRECTORIES ${CMAKE_SOURCE_DIR}/src/ComputeFeature)       
-list (APPEND PROJECT_DIRECTORIES ${CMAKE_SOURCE_DIR}/src/ComputeFingerprint)       
-list (APPEND PROJECT_DIRECTORIES ${CMAKE_SOURCE_DIR}/src/ComputeKey)       
-list (APPEND PROJECT_DIRECTORIES ${CMAKE_SOURCE_DIR}/src/ComputeMelSpectrogram)   
-list (APPEND PROJECT_DIRECTORIES ${CMAKE_SOURCE_DIR}/src/ComputeNoveltyFunction)       
-list (APPEND PROJECT_DIRECTORIES ${CMAKE_SOURCE_DIR}/src/ComputePitch)       
-list (APPEND PROJECT_DIRECTORIES ${CMAKE_SOURCE_DIR}/src/ComputeSpectrogram)   
+list (APPEND PROJECT_DIRECTORIES ${ACA_SOURCE_DIR}/src/ComputeBeatHisto)       
+list (APPEND PROJECT_DIRECTORIES ${ACA_SOURCE_DIR}/src/ComputeChords)      
+list (APPEND PROJECT_DIRECTORIES ${ACA_SOURCE_DIR}/src/ComputeFeature)       
+list (APPEND PROJECT_DIRECTORIES ${ACA_SOURCE_DIR}/src/ComputeFingerprint)       
+list (APPEND PROJECT_DIRECTORIES ${ACA_SOURCE_DIR}/src/ComputeKey)       
+list (APPEND PROJECT_DIRECTORIES ${ACA_SOURCE_DIR}/src/ComputeMelSpectrogram)   
+list (APPEND PROJECT_DIRECTORIES ${ACA_SOURCE_DIR}/src/ComputeNoveltyFunction)       
+list (APPEND PROJECT_DIRECTORIES ${ACA_SOURCE_DIR}/src/ComputePitch)       
+list (APPEND PROJECT_DIRECTORIES ${ACA_SOURCE_DIR}/src/ComputeSpectrogram)   
 
-list (APPEND PROJECT_DIRECTORIES ${CMAKE_SOURCE_DIR}/src/AudioFileIO) 
+list (APPEND PROJECT_DIRECTORIES ${ACA_SOURCE_DIR}/src/AudioFileIO) 
     
 # set includes
 set (PROJECT_INCLUDES)
-list (APPEND PROJECT_INCLUDES ${CMAKE_SOURCE_DIR}/inc)       
-list (APPEND PROJECT_INCLUDES ${CMAKE_SOURCE_DIR}/inc/helper)       
+list (APPEND PROJECT_INCLUDES ${ACA_SOURCE_DIR}/inc)       
+list (APPEND PROJECT_INCLUDES ${ACA_SOURCE_DIR}/inc/helper)       
 list (APPEND PROJECT_INCLUDES ${CMAKE_BINARY_DIR}/inc)       
 
 if (WITH_TESTS)
     list (APPEND PROJECT_INCLUDES ${CMAKE_BINARY_DIR}/3rdparty/catch2)       
-    list (APPEND PROJECT_DIRECTORIES ${CMAKE_SOURCE_DIR}/src/Tests/TestExec)
+    list (APPEND PROJECT_DIRECTORIES ${ACA_SOURCE_DIR}/src/Tests/TestExec)
 endif (WITH_TESTS)
 
 # add directories
@@ -63,7 +65,7 @@ message(STATUS ${PROJECT_NAME} Version: ${PROJECT_VERSION})
 message(STATUS "")
 
 # generate platform config file
-configure_file(${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}Config.h.in ${CMAKE_BINARY_DIR}/inc/${PROJECT_NAME}Config.h)
+configure_file(${ACA_SOURCE_DIR}/src/${PROJECT_NAME}Config.h.in ${CMAKE_BINARY_DIR}/inc/${PROJECT_NAME}Config.h)
 
 #######################################################################################################
 # ## tests
@@ -71,7 +73,7 @@ if (WITH_TESTS)
     enable_testing()
     
     # add tests here
-    add_test(AudioIo ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/TestExec AudioIo* "${CMAKE_SOURCE_DIR}/src/Tests/TestData/")
+    add_test(AudioIo ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/TestExec AudioIo* "${ACA_SOURCE_DIR}/src/Tests/TestData/")
     add_test(BeatHisto ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/TestExec BeatHisto*)
     add_test(Chord ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/TestExec Chord*)
     add_test(Dtw ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/TestExec Dtw*)
@@ -96,7 +98,7 @@ endif (WITH_TESTS)
 #-- Add an Option to toggle the generation of the API documentation
 option(WITH_DOXYGENTARGET "Use Doxygen to create the documentation" OFF)
 #-- Configure the Template doxy.config for our specific project
-configure_file(${CMAKE_SOURCE_DIR}/src/doxy.config.in ${PROJECT_BINARY_DIR}/docs/doxy.config)
+configure_file(${ACA_SOURCE_DIR}/src/doxy.config.in ${PROJECT_BINARY_DIR}/docs/doxy.config)
 if(WITH_DOXYGENTARGET)
     FIND_PACKAGE(Doxygen)
     if (NOT DOXYGEN_FOUND)
