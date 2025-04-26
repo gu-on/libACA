@@ -1,7 +1,9 @@
 #include <AcaAll.h>
 
-#ifdef WITH_TESTS
-#include "catch.hpp"
+#include <catch2/catch_all.hpp>
+#include <catch2/catch_approx.hpp>
+
+using Catch::Approx;
 
 TEST_CASE("Pitch tracking (class interface per block)", "[PitchBlockClass]")
 {
@@ -274,5 +276,3 @@ TEST_CASE("Pitch (per array)", "[PitchClass]")
     CVector::free(pfPitch);
     CHECK(Error_t::kNoError == CPitchIf::destroy(pCInstance));
 }
-
-#endif //WITH_TESTS

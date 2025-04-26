@@ -1,7 +1,9 @@
 #include <AcaAll.h>
 
-#ifdef WITH_TESTS
-#include "catch.hpp"
+#include <catch2/catch_all.hpp>
+#include <catch2/catch_approx.hpp>
+
+using Catch::Approx;
 
 TEST_CASE("RingBuffer", "[RingBuffer]")
 {
@@ -236,5 +238,3 @@ SECTION("RbDelay")
     delete[] pfData;
     delete pCRingBuff;
 }
-
-#endif //WITH_TESTS

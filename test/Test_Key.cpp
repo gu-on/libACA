@@ -1,7 +1,7 @@
 #include <AcaAll.h>
 
-#ifdef WITH_TESTS
-#include "catch.hpp"
+#include <catch2/catch_all.hpp>
+#include <catch2/catch_approx.hpp>
 
 TEST_CASE("Key profile distance", "[KeyFromChroma]")
 {
@@ -86,5 +86,3 @@ TEST_CASE("Key class", "[Key]")
 
     delete pCInstance;
 }
-
-#endif //WITH_TESTS

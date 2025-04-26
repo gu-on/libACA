@@ -1,7 +1,9 @@
 #include <AcaAll.h>
 
-#ifdef WITH_TESTS
-#include "catch.hpp"
+#include <catch2/catch_all.hpp>
+#include <catch2/catch_approx.hpp>
+
+using Catch::Approx;
 
 TEST_CASE("Matrix", "[Matrix]") 
 {
@@ -219,4 +221,3 @@ TEST_CASE("MatrixVector", "[Vector]")
     CVector::free(pfVec1);
     CVector::free(pfVec2);
 }
-#endif //WITH_TESTS

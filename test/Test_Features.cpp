@@ -1,7 +1,9 @@
 #include <AcaAll.h>
 
-#ifdef WITH_TESTS
-#include "catch.hpp"
+#include <catch2/catch_all.hpp>
+#include <catch2/catch_approx.hpp>
+
+using Catch::Approx;
 
 TEST_CASE("Features (static functions)", "[FeaturesStatic]")
 {
@@ -117,8 +119,8 @@ TEST_CASE("Features (static functions)", "[FeaturesStatic]")
 
         // one spectrum zero, the other two
         CVector::mulC_I(pfIn, 2.F, iLenBuff);
-        CHECK(std::sqrt(4.F * (iLenBuff / 2)) / (iLenBuff / 2) == Approx(CFeatureFromBlockIf::compFeatureSpectralFlux(pfIn, &pfIn[iIdx], iLenBuff / 2)).margin(1e-4F).epsilon(1e-4F));
-        CHECK(std::sqrt(4.F * (iLenBuff / 2)) / (iLenBuff / 2) == Approx(CFeatureFromBlockIf::compFeatureSpectralFlux(&pfIn[iIdx], pfIn, iLenBuff / 2)).margin(1e-4F).epsilon(1e-4F));
+        CHECK(std::sqrt(4.F * (iLenBuff / 2.f)) / (iLenBuff / 2.f) == Approx(CFeatureFromBlockIf::compFeatureSpectralFlux(pfIn, &pfIn[iIdx], iLenBuff / 2)).margin(1e-4F).epsilon(1e-4F));
+        CHECK(std::sqrt(4.F * (iLenBuff / 2.f)) / (iLenBuff / 2.f) == Approx(CFeatureFromBlockIf::compFeatureSpectralFlux(&pfIn[iIdx], pfIn, iLenBuff / 2)).margin(1e-4F).epsilon(1e-4F));
 
         // alternating spectral bins
         iIdx = 4;
@@ -603,5 +605,3 @@ TEST_CASE("Features (per array)", "[FeaturesClass]")
 
     delete[] pfIn;
 }
-
-#endif //WITH_TESTS

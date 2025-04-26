@@ -1,11 +1,11 @@
-#include "AcaAll.h"
+#include <AcaAll.h>
 
 #include <catch2/catch_all.hpp>
 #include <catch2/catch_approx.hpp>
 
 using Catch::Approx;
 
-extern std::string cTestDataDir;
+std::string cTestDataDir{TEST_DIR};
 
 namespace AudioIoTest 
 {

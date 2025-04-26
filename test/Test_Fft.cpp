@@ -1,7 +1,9 @@
 #include <AcaAll.h>
 
-#ifdef WITH_TESTS
-#include "catch.hpp"
+#include <catch2/catch_all.hpp>
+#include <catch2/catch_approx.hpp>
+
+using Catch::Approx;
 
 TEST_CASE("Fft", "[FFT]")
 {
@@ -215,6 +217,3 @@ TEST_CASE("Fft", "[FFT]")
     delete[] pfTmp;
 
 }
-
-#endif //WITH_TESTS
-

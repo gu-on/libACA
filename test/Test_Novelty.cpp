@@ -1,7 +1,9 @@
 #include <AcaAll.h>
 
-#ifdef WITH_TESTS
-#include "catch.hpp"
+#include <catch2/catch_all.hpp>
+#include <catch2/catch_approx.hpp>
+
+using Catch::Approx;
 
 TEST_CASE("Novelty (static functions)", "[NoveltyStatic]")
 {
@@ -40,7 +42,7 @@ TEST_CASE("Novelty (static functions)", "[NoveltyStatic]")
         // one spectrum zero, the other two
         CVector::mulC_I(pfIn, 2.F, iLenBuff);
         CHECK(0.F == Approx(CNoveltyFromBlockIf::compNoveltyFlux(pfIn, &pfIn[iIdx], iLenBuff / 2)).margin(1e-4F).epsilon(1e-4F));
-        CHECK(std::sqrt(4.F * (iLenBuff / 2)) / (iLenBuff / 2) == Approx(CNoveltyFromBlockIf::compNoveltyFlux(&pfIn[iIdx], pfIn, iLenBuff / 2)).margin(1e-4F).epsilon(1e-4F));
+        CHECK(std::sqrt(4.F * (iLenBuff / 2.f)) / (iLenBuff / 2.f) == Approx(CNoveltyFromBlockIf::compNoveltyFlux(&pfIn[iIdx], pfIn, iLenBuff / 2)).margin(1e-4F).epsilon(1e-4F));
 
         //decreasing spectrum
         CVector::setZero(pfIn, iLenBuff / 2);
@@ -278,5 +280,3 @@ TEST_CASE("Novelty (per array)", "[NoveltyClass]")
     delete[] pbOnset;
 
 }
-
-#endif //WITH_TESTS

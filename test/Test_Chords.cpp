@@ -1,9 +1,9 @@
 #include <AcaAll.h>
 
-#ifdef WITH_TESTS
-#include "catch.hpp"
+#include <catch2/catch_all.hpp>
+#include <catch2/catch_approx.hpp>
 
-
+using Catch::Approx;
 
 TEST_CASE("Chord (per block)", "[ChordsBlock]")
 {
@@ -205,5 +205,3 @@ TEST_CASE("Chord (per file)", "[ChordsClass]")
     CVector::free(pfIn);
     CVector::free(peResult);
 }
-
-#endif //WITH_TESTS

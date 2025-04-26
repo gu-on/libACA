@@ -1,7 +1,7 @@
 #include <AcaAll.h>
 
-#ifdef WITH_TESTS
-#include "catch.hpp"
+#include <catch2/catch_all.hpp>
+#include <catch2/catch_approx.hpp>
 
 TEST_CASE("Dtw", "[Dtw]") 
 {
@@ -156,5 +156,3 @@ TEST_CASE("Dtw", "[Dtw]")
 
 
 }
-
-#endif //WITH_TESTS

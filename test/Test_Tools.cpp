@@ -1,13 +1,13 @@
 #include <AcaAll.h>
 
-#ifdef WITH_TESTS
-
 #include "Synthesis.h"
 #include "Vector.h"
 #include "Matrix.h"
 
-#include "catch.hpp"
+#include <catch2/catch_all.hpp>
+#include <catch2/catch_approx.hpp>
 
+using Catch::Approx;
 
 TEST_CASE("ToolsBlockAudio", "[ToolsBlockAudio]")
 {
@@ -1897,5 +1897,3 @@ TEST_CASE("ToolsViterbi", "[ToolsViterbi]")
     CMatrix::free(ppfTransProb, iNumStates);
     CVector::free(piPath);
 }
-
-#endif //WITH_TESTS
