@@ -1,34 +1,35 @@
-set(CurrLib Aca)
+add_library(libACA
+    AcaAll.cpp
+    BeatHisto.cpp
+    Chord.cpp
+    ChordFromBlock.cpp
+    Feature.cpp
+    FeatureFromBlock.cpp
+    Fft.cpp
+    Key.cpp
+    KeyFromChroma.cpp
+    Novelty.cpp
+    NoveltyFromBlock.cpp
+    Pitch.cpp
+    PitchFromBlock.cpp
+    Spectrogram.cpp
+    SubFingerprint.cpp
+    ToolBlockAudio.cpp
+    ToolCcf.cpp
+    ToolConversion.cpp
+    ToolFingerprint.cpp
+    ToolGammatone.cpp
+    ToolGmm.cpp
+    ToolGmmClassifier.cpp
+    ToolLeaveOneOutCrossVal.cpp
+    ToolNmf.cpp
+    ToolPca.cpp
+    ToolSeqFeatureSel.cpp
+    ToolSimpleDtw.cpp
+    ToolSimpleKmeans.cpp
+    ToolSimpleKnn.cpp
+    ToolViterbi.cpp
+)
 
-## get all source files
-file(GLOB ${CurrLib}_SOURCES RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} *.cpp;*.txt)
-file(GLOB 3RDPARTY_SOURCES RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} ../../3rdparty/Fft/*.cpp)
-file(GLOB ${CurrLib}_HEADERS RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} *.h;../../inc/*.h;../../3rdparty/Fft/*.h)
-file(GLOB HELPER_HEADERS RELATIVE ${ACA_SOURCE_DIR}/src/${CurrLib} ../../inc/helper/*.h)
-
-## add include directories
-include_directories(${ACA_SOURCE_DIR}/3rdparty/Fft ${ACA_SOURCE_DIR}/inc/helper)
-add_inc_directories ()
-
-## build a static library
-add_library(${CurrLib} STATIC ${${CurrLib}_SOURCES} ${TOOLS_SOURCES} ${3RDPARTY_SOURCES} ${${CurrLib}_HEADERS} ${HELPER_HEADERS})
-set_target_properties(${CurrLib} PROPERTIES CLEAN_DIRECT_OUTPUT 1)
-
-## set output name
-set_target_properties(${CurrLib} PROPERTIES OUTPUT_NAME "${CurrLib}")
-set_target_properties(${CurrLib} PROPERTIES PREFIX "lib")
-
-source_group("Tools" FILES ${TOOLS_SOURCES})
-source_group("Header Files\\Helpers" FILES ${HELPER_HEADERS})
-source_group("3rd Party" FILES ${3RDPARTY_SOURCES})
-
-if(MSVC)
-    target_compile_options(${CurrLib} PRIVATE /W4 /WX)
-else (MSVC)
-    target_compile_options(${CurrLib} PRIVATE -Wall)
-endif(MSVC)
-
-## set group in IDE
-target_link_libraries(${CurrLib} AudioFileIO)
-
-
+target_link_libraries(libACA PUBLIC rvfft)
+target_include_directories(libACA PUBLIC ${ACA_SOURCE_DIR}/inc ${ACA_SOURCE_DIR}/inc/helper ${CMAKE_BINARY_DIR}/inc)
