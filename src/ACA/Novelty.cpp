@@ -1,16 +1,14 @@
 
-#include "Util.h"
-#include "AudioFileIf.h"
-#include "Fft.h"
+#include "helper/Util.h"
+#include "helper/Fft.h"
 
+#include "AudioFileIf.h"
 #include "ToolPreProc.h"
 #include "ToolBlockAudio.h"
 #include "ToolLowPass.h"
 
 #include "Novelty.h"
 #include "NoveltyFromBlock.h"
-
-
 
 /*! \brief class for computation of the novelty function from a file
 */

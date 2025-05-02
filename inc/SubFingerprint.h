@@ -1,6 +1,8 @@
 #if !defined(__ACA_SubFingerprint_HEADER_INCLUDED__)
 #define __ACA_SubFingerprint_HEADER_INCLUDED__
 
+#include <cstdint>
+
 #include "ErrorDef.h"
 
 /*! \brief class for computation of a subfingerprint from a magnitude spectrum, 256 subfingerprints comprise one fingerprint

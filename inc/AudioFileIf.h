@@ -2,7 +2,6 @@
 #define __ACA_AudioFileIf_HEADER_INCLUDED__
 
 #include <string>
-#include <fstream>
 #include <algorithm>
 #include "ErrorDef.h"
 

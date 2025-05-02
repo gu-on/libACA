@@ -1,21 +1,17 @@
-
-
 #include <cmath>
-
 #include <map>
 
-#include "Matrix.h"
-#include "Util.h"
-#include "AudioFileIf.h"
-#include "Fft.h"
+#include "helper/Matrix.h"
+#include "helper/Util.h"
+#include "helper/Fft.h"
 
+#include "AudioFileIf.h"
 #include "ToolPreProc.h"
 #include "ToolBlockAudio.h"
 #include "ToolViterbi.h"
 
 #include "Chord.h"
 #include "ChordFromBlock.h"
-
 
 /*! \brief class for computation of chord progression from a file
 */

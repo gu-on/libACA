@@ -1,7 +1,7 @@
 
-#include "Matrix.h"
-#include "Vector.h"
-#include "Synthesis.h"
+#include "helper/Matrix.h"
+#include "helper/Vector.h"
+#include "helper/Synthesis.h"
 
 #include "ToolSimpleKmeans.h"
 

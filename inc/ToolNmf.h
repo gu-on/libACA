@@ -5,7 +5,6 @@
 
 #include "ErrorDef.h"
 
-
 /*! \brief class holding the result of Non-Negative Matrix Factorization executed with ::CNmf
 */
 class CNmfResult

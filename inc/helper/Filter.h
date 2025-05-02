@@ -3,7 +3,7 @@
 
 #include <cmath>
 
-#include "ErrorDef.h"
+#include "../ErrorDef.h"
 
 #include "Vector.h"
 #include "Matrix.h"

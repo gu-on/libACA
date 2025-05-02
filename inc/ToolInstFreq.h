@@ -1,16 +1,13 @@
 #if !defined(__ACA_InstFreq_HEADER_INCLUDED__)
 #define __ACA_InstFreq_HEADER_INCLUDED__
 
-
-
 #include <cassert>
 #include <cmath>
 
-#include "Util.h"
-#include "Vector.h"
-#include "Fft.h"
+#include "helper/Util.h"
+#include "helper/Vector.h"
+#include "helper/Fft.h"
 #include "ErrorDef.h"
-
 
 /*! \brief class for extracting the instantaneous frequency
 */

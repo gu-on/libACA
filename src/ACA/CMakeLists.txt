@@ -32,4 +32,7 @@ add_library(libACA
 )
 
 target_link_libraries(libACA PUBLIC rvfft)
-target_include_directories(libACA PUBLIC ${ACA_SOURCE_DIR}/inc ${ACA_SOURCE_DIR}/inc/helper ${CMAKE_BINARY_DIR}/inc)
+target_include_directories(libACA PUBLIC 
+    ${ACA_SOURCE_DIR}/inc
+    ${CMAKE_BINARY_DIR}/inc
+)

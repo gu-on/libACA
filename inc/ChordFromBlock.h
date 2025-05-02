@@ -1,6 +1,5 @@
 #if !defined(__ACA_ChordFromBlock_HEADER_INCLUDED__)
 #define __ACA_ChordFromBlock_HEADER_INCLUDED__
-#include <map>
 
 #include "ErrorDef.h"
 

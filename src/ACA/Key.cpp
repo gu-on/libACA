@@ -1,12 +1,11 @@
 
 #include <map>
 
-#include "Matrix.h"
-#include "Feature.h"
+#include "helper/Matrix.h"
 
+#include "Feature.h"
 #include "Key.h"
 #include "KeyFromChroma.h"
-
 
 CKey::CKey()
 {

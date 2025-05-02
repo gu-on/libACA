@@ -8,6 +8,7 @@
 #include <cmath>
 
 #include "Synthesis.h"
+#include "Util.h"
 
 /*! \brief class with static functions for buffer operations with type T
 */

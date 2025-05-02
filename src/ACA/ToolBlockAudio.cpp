@@ -1,8 +1,9 @@
-#include "Vector.h"
-#include "Matrix.h"
-#include "RingBuffer.h"
-#include "AudioFileIf.h"
 
+#include "helper/Vector.h"
+#include "helper/Matrix.h"
+#include "helper/RingBuffer.h"
+
+#include "AudioFileIf.h"
 #include "ToolPreProc.h"
 
 #include "ToolBlockAudio.h"

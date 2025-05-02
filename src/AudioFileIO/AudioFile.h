@@ -1,6 +1,8 @@
 #if !defined(__AudioFile_HEADER_INCLUDED__)
 #define __AudioFile_HEADER_INCLUDED__
 
+#include <fstream>
+
 #include "AudioFileIf.h"
 
 #define WITH_SNDLIB

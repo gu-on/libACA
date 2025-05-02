@@ -1,11 +1,10 @@
 
-
 #include <cmath>
 #include <complex>
 
-#include "AudioFileIf.h"
-#include "Filter.h"
+#include "helper/Filter.h"
 
+#include "AudioFileIf.h"
 #include "ToolPreProc.h"
 #include "ToolBlockAudio.h"
 

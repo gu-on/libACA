@@ -5,8 +5,8 @@
 
 #include "AudioFileIf.h"
 
-#include "Matrix.h"
-#include "Vector.h"
+#include "helper/Matrix.h"
+#include "helper/Vector.h"
 
 /*! \brief class with static utility functions for pre-processing
 */

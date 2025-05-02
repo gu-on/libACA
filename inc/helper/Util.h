@@ -3,7 +3,6 @@
 
 #include <cassert>
 #include <cstring>
-#include <limits>
 
 /*! \brief class with static utility functions
 */

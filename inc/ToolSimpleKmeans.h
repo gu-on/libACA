@@ -5,7 +5,6 @@
 
 #include "ErrorDef.h"
 
-
 /*! \brief implements kmeans clustering
 */
 class CKmeans

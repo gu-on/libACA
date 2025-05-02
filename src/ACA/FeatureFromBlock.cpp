@@ -1,7 +1,7 @@
 
-#include "Vector.h"
-#include "Matrix.h"
-#include "Util.h"
+#include "helper/Vector.h"
+#include "helper/Matrix.h"
+#include "helper/Util.h"
 
 #include "ToolConversion.h"
 #include "ToolCcf.h"

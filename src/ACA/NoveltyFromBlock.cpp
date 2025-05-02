@@ -1,9 +1,7 @@
 
-#include "Vector.h"
-#include "Util.h"
+#include "helper/Vector.h"
 
 #include "NoveltyFromBlock.h"
-
 
 ////////////////////////////////////////////////////////////////////////
 // static member functions

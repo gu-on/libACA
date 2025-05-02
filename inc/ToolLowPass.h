@@ -3,9 +3,9 @@
 
 #include <cmath>
 
-#include "RingBuffer.h"
+#include "helper/RingBuffer.h"
+#include "helper/Vector.h"
 #include "ErrorDef.h"
-
 
 /*! \brief class for single-pole low pass filtering
 */

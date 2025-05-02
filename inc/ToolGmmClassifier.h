@@ -7,7 +7,6 @@
 
 #include "ClassifierBase.h"
 
-
 /*! \brief computation of k nearest neighbor
 */
 class CGmmClassifier : public CClassifierBase

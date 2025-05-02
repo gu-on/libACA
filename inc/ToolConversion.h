@@ -8,8 +8,6 @@
 #include <map>
 #include <functional>
 
-#include "ErrorDef.h"
-
 /*! \brief class for various frequency conversion functions
 */
 class CConversion

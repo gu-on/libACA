@@ -1,8 +1,8 @@
 
-#include "Util.h"
-#include "AudioFileIf.h"
-#include "Fft.h"
+#include "helper/Util.h"
+#include "helper/Fft.h"
 
+#include "AudioFileIf.h"
 #include "ToolPreProc.h"
 #include "ToolBlockAudio.h"
 

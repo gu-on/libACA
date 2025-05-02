@@ -1,7 +1,7 @@
 
-#include "Util.h"
-#include "Vector.h"
-#include "Fft.h"
+#include "helper/Util.h"
+#include "helper/Vector.h"
+#include "helper/Fft.h"
 #include "Novelty.h"
 
 #include "ToolCcf.h"
@@ -10,7 +10,6 @@
 #include "ToolConversion.h"
 
 #include "BeatHisto.h"
-
 
 inline CBeatHistoIf::~CBeatHistoIf()
 {

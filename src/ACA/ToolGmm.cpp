@@ -1,9 +1,10 @@
 
-#include "Matrix.h"
-#include "Vector.h"
-#include "Synthesis.h"
-#include "ToolPca.h"
+#include "helper/Matrix.h"
+#include "helper/Vector.h"
+#include "helper/Synthesis.h"
+#include "helper/Util.h"
 
+#include "ToolPca.h"
 #include "ToolGmm.h"
 
 CGmm::~CGmm(void) { reset(); }

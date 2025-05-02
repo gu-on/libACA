@@ -1,6 +1,8 @@
+
 #include <string>
 
 #include "AcaAll.h"
+#include "ACAConfig.h"
 
 static const std::string kAcaBuildDate = __DATE__;
 

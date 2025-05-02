@@ -1,18 +1,17 @@
-#include <cstdint>
-#include "Util.h"
-#include "Matrix.h"
-#include "Vector.h"
-#include "AudioFileIf.h"
-#include "Fft.h"
 
+#include <cstdint>
+
+#include "helper/Matrix.h"
+#include "helper/Vector.h"
+#include "helper/Fft.h"
+
+#include "AudioFileIf.h"
 #include "ToolPreProc.h"
 #include "ToolBlockAudio.h"
 #include "ToolResample.h"
 
 #include "SubFingerprint.h"
-
 #include "ToolFingerprint.h"
-
 
 CFingerprint::~CFingerprint()
 {

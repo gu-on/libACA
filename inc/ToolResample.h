@@ -3,8 +3,8 @@
 
 #include "ErrorDef.h"
 
-#include "Filter.h"
-#include "Util.h"
+#include "helper/Filter.h"
+#include "helper/Util.h"
 
 /*! \brief class for simple interpolation/sample rate conversion
 */

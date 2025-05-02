@@ -1,6 +1,6 @@
 #include <algorithm>
 
-#include "Matrix.h"
+#include "helper/Matrix.h"
 
 #include "ToolNmf.h"
 

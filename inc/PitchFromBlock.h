@@ -5,7 +5,6 @@
 
 #include "Pitch.h"
 
-
 /*! \brief class for computation of f0 from a block of data (e.g., time or magnitude spectrum)
 */
 class CPitchFromBlockIf

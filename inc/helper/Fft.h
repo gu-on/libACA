@@ -1,7 +1,7 @@
 #if !defined(__ACA_Fft_HEADER_INCLUDED__)
 #define __ACA_Fft_HEADER_INCLUDED__
 
-#include "ErrorDef.h"
+#include "../ErrorDef.h"
 
 /*! \brief class for FFT computation with windowing
 */

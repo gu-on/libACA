@@ -1,6 +1,6 @@
 
-#include "Matrix.h"
-#include "Vector.h"
+#include "helper/Matrix.h"
+#include "helper/Vector.h"
 
 #include "ToolSimpleKnn.h"
 

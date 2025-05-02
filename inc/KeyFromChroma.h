@@ -3,8 +3,6 @@
 
 #pragma once
 
-#include "ErrorDef.h"
-
 // forward declaration
 template <class T> class CRingBuffer;
 

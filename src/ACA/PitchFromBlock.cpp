@@ -1,8 +1,8 @@
 #include <limits>
 
-#include "Filter.h"
-#include "Vector.h"
-#include "Util.h"
+#include "helper/Filter.h"
+#include "helper/Vector.h"
+#include "helper/Util.h"
 
 #include "ToolConversion.h"
 #include "ToolCcf.h"

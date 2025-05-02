@@ -5,8 +5,7 @@
 #include <cmath>
 #include <cstdlib>
 
-#include "ErrorDef.h"
-#include "Util.h"
+#include "../ErrorDef.h"
 
 /*! \brief class with static functions for signal generation
 */

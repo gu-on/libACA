@@ -6,7 +6,6 @@
 #include "ErrorDef.h"
 #include "ClassifierBase.h"
 
-
 /*! \brief computation of k nearest neighbor
 */
 class CKnn : public CClassifierBase
