@@ -1,6 +1,5 @@
 
 #include <map>
-#include <functional>
 
 #include "Util.h"
 #include "AudioFileIf.h"

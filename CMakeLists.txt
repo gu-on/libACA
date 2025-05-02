@@ -4,8 +4,6 @@ project(ACA VERSION 0.3.1 LANGUAGES CXX C)
 
 set(ACA_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -17,5 +15,18 @@ add_subdirectory(3rdparty/sndlib)
 add_subdirectory(src/ACA)
 add_subdirectory(src/AudioFileIO)
 
-enable_testing()
-add_subdirectory(test)
+option(ACA_TEST "Build unit tests" OFF)
+
+if (ACA_TEST)
+    include(FetchContent)
+    FetchContent_Declare(
+    Catch2 
+    GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+    GIT_TAG v3.4.0
+    )
+
+    FetchContent_MakeAvailable(Catch2)
+
+    enable_testing()
+    add_subdirectory(test)
+endif()
