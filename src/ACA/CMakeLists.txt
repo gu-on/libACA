@@ -32,6 +32,11 @@ add_library(libACA
 )
 
 target_link_libraries(libACA PUBLIC rvfft)
+
+if (MSVC)
+    target_compile_options(libACA PUBLIC -D_USE_MATH_DEFINES)
+endif()
+
 target_include_directories(libACA PUBLIC 
     ${ACA_SOURCE_DIR}/inc
     ${CMAKE_BINARY_DIR}/inc
